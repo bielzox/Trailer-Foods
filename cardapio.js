@@ -20,6 +20,10 @@ async function init(){
   subscribeMenu();
 }
 async function refreshMenu(){
+  if(!sb){
+    $('#grid').innerHTML='<p class="em">Cardápio não configurado. Copie config.example.js para config.js e configure a URL e a chave publicável do Supabase.</p>';
+    return false;
+  }
   let s,c,p;
   try{
     [s,c,p]=await Promise.all([sb.from('settings').select('*'),sb.from('categories').select('*').order('name'),sb.from('products').select('*').eq('active',true).order('name')]);
@@ -33,6 +37,7 @@ async function refreshMenu(){
   theme();render();return true;
 }
 function scheduleMenuRefresh(){
+  if(!sb)return;
   clearTimeout(menuRefreshTimer);
   menuRefreshTimer=setTimeout(async()=>{
     if(menuRefreshRunning){menuRefreshQueued=true;return}
@@ -79,6 +84,7 @@ function openCart(){
 }
 async function send(b){
   const name=$('#cn').value.trim();if(!name){$('#cn').focus();$('#cn').style.borderColor='#ff5d6c';return}
+  if(!sb)return alert('O cardápio ainda não está conectado ao Supabase. Confira a configuração do site.');
   b.disabled=true;b.textContent='Enviando...';
   try{
     const r=await sb.from('orders').insert({customer:name,table_no:$('#cm').value.trim()||null,status:'pendente',items:Object.entries(cart).map(([id,q])=>({id:+id,qty:q}))});
@@ -87,5 +93,5 @@ async function send(b){
   cart={};render();
   $('#mb').innerHTML=`<div class="ok"><div>✓</div><p>${esc(S.msg_ok)}</p></div><button class="go" data-x>Fechar</button>`;
 }
-document.addEventListener('visibilitychange',()=>{if(!document.hidden)scheduleMenuRefresh()});
+document.addEventListener('visibilitychange',()=>{if(sb&&!document.hidden)scheduleMenuRefresh()});
 init();

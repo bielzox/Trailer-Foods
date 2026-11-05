@@ -3,6 +3,5 @@ instalador/
 instalador-admin/
 site-celular/
 backups/
-config.js
 .env
 .env.*

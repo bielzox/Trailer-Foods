@@ -8,8 +8,8 @@
 - `logo.png` → logo original; `icone.png` / `icone.ico` / `icone-*.png` são gerados dela
 - `Imagens/` (logo2, logo fundo, PSD) · `backups/` · `setup.sql` · `admin-bootstrap.sql` · `admin-access-requests.sql` · `supabase.js`
 
-## Configuração local do Supabase
-`config.js` contém a URL do projeto e a chave publicável do Supabase e não é enviado ao GitHub. Ao clonar o repositório, copie `config.example.js` para `config.js` e preencha os valores de **Project URL** e da chave **anon/publicável** do seu projeto. Nunca coloque uma chave `service_role` ou `sb_secret_` nesse arquivo.
+## Configuração do Supabase
+`config.js` contém a URL do projeto e a chave **publishable** (pública, própria para uso no navegador) do Supabase. Ela não é uma senha e não concede privilégios administrativos: mantenha RLS e as políticas do `setup.sql` ativas. Nunca coloque uma chave `service_role` ou `sb_secret_` nesse arquivo. Para usar outro projeto, copie `config.example.js` para `config.js` e preencha **Project URL** e a chave publicável.
 
 ## Gerar os instaladores
 Dê dois cliques em **`gerar-instalador.bat`** (precisa do Node.js LTS e de internet na 1ª vez).

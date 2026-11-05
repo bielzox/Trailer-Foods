@@ -1,5 +1,5 @@
 // Service worker: deixa cardapio e admin instalaveis no celular e abrindo mesmo sem internet.
-const V = 'lanchonete-v19';
+const V = 'lanchonete-v20';
 const ARQ = ['./', 'index.html', 'cardapio.js', 'supabase.js', 'config.js', 'manifest.webmanifest',
   'icone-192.png', 'icone-512.png', 'admin/admin.html', 'admin/admin.js', 'admin/manifest-admin.webmanifest'];
 
