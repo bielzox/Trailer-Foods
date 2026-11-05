@@ -1,7 +1,7 @@
 {
-  "name": "Lanchonete - Cardápio",
+  "name": "Trailer Foods",
   "short_name": "Cardápio",
-  "description": "Cardápio da Lanchonete",
+  "description": "Cardápio do Trailer Foods",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

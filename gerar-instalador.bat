@@ -1,7 +1,7 @@
 @echo off
 setlocal
 cd /d "%~dp0"
-title Gerar instaladores - Lanchonete
+title Gerar instaladores - Trailer Foods
 
 where node >nul 2>nul
 if errorlevel 1 (

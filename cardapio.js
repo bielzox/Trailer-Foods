@@ -3,7 +3,7 @@ const COLS=[["fundo", "#0d0b0a", null], ["c_nome", "#ffb020", "cor2"], ["c_titul
 const sb=(CFG.SUPABASE_URL&&CFG.SUPABASE_ANON_KEY&&window.supabase)?supabase.createClient(CFG.SUPABASE_URL,CFG.SUPABASE_ANON_KEY):null;
 const $=s=>document.querySelector(s),brl=n=>Number(n||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let S={nome:'Lanchonete',logo:'🍔',logo_img:'',fundo_img:'',fundo_t:'50',titulo:'Cardápio',subtitulo:'',btn:'Enviar pedido',msg_ok:'Pedido enviado!'},cats=[],P=[],cat='all',cart={};
+let S={nome:'Trailer Foods',logo:'🍔',logo_img:'',fundo_img:'',fundo_t:'50',titulo:'Cardápio',subtitulo:'',btn:'Enviar pedido',msg_ok:'Pedido enviado!'},cats=[],P=[],cat='all',cart={};
 let menuChannel=null,menuRefreshTimer=0,menuFallbackTimer=0,menuRefreshRunning=false,menuRefreshQueued=false;
 
 function theme(){

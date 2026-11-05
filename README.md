@@ -1,4 +1,4 @@
-# Lanchonete – instaladores (PC e celular)
+# Trailer Foods – instaladores (PC e celular)
 
 ## Estrutura
 - `index.html` + `cardapio.js` → Cardápio (cliente)
@@ -11,7 +11,7 @@
 ## Configuração do Supabase
 `config.js` contém a URL do projeto e a chave **publishable** (pública, própria para uso no navegador) do Supabase. Ela não é uma senha e não concede privilégios administrativos: mantenha RLS e as políticas do `setup.sql` ativas. Nunca coloque uma chave `service_role` ou `sb_secret_` nesse arquivo. Para usar outro projeto, copie `config.example.js` para `config.js` e preencha **Project URL** e a chave publicável.
 
-## Gerar os instaladores
+## Gerar os instaladores do Trailer Foods
 Dê dois cliques em **`gerar-instalador.bat`** (precisa do Node.js LTS e de internet na 1ª vez).
 - Opção 1: Cardápio e Admin (PC) · 2: só Cardápio (PC) · 3: só Admin (PC)
 - Saída: `instalador/` (Cardápio) e `instalador-admin/` (Admin)

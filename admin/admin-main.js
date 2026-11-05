@@ -8,7 +8,7 @@ function criar() {
   Menu.setApplicationMenu(null);
   const w = new BrowserWindow({
     width: 1360, height: 860, minWidth: 380, minHeight: 600,
-    title: 'Lanchonete - Admin',
+    title: 'Trailer Foods - Admin',
     icon: path.join(__dirname, 'icone.png'),
     autoHideMenuBar: true,
     webPreferences: { preload: path.join(__dirname, '..', 'preload.js'), contextIsolation: true, nodeIntegration: false }

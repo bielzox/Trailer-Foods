@@ -1,7 +1,7 @@
 {
-  "name": "Lanchonete - Admin",
+  "name": "Trailer Foods Admin",
   "short_name": "Admin",
-  "description": "Painel Admin da Lanchonete",
+  "description": "Painel Admin do Trailer Foods",
   "start_url": "./admin.html",
   "scope": "./",
   "display": "standalone",

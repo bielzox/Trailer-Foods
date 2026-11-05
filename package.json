@@ -1,9 +1,9 @@
 {
-  "name": "lanchonete-cardapio",
-  "productName": "Lanchonete Cardapio",
+  "name": "trailer-foods",
+  "productName": "Trailer Foods",
   "version": "1.0.0",
-  "description": "Cardápio da Lanchonete (PC)",
-  "author": "Lanchonete",
+  "description": "Cardápio do Trailer Foods (PC)",
+  "author": "Trailer Foods",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -17,7 +17,7 @@
   },
   "build": {
     "appId": "com.lanchonete.cardapio",
-    "productName": "Lanchonete Cardapio",
+    "productName": "Trailer Foods",
     "directories": { "output": "instalador" },
     "files": ["main.js", "preload.js", "index.html", "cardapio.js", "supabase.js", "config.js", "icone.png", "icone.ico", "package.json"],
     "win": { "target": [{ "target": "nsis", "arch": ["x64"] }], "icon": "icone.ico" },
@@ -26,7 +26,7 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "Lanchonete Cardapio",
+      "shortcutName": "Trailer Foods",
       "installerIcon": "icone.ico",
       "uninstallerIcon": "icone.ico",
       "installerHeaderIcon": "icone.ico"
