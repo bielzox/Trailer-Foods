@@ -1,0 +1,18 @@
+{
+  "appId": "com.lanchonete.admin",
+  "productName": "Lanchonete Admin",
+  "directories": { "output": "instalador-admin" },
+  "extraMetadata": { "main": "admin/admin-main.js", "name": "lanchonete-admin", "productName": "Lanchonete Admin", "description": "Painel Admin da Lanchonete (PC)" },
+  "files": ["admin/admin.html", "admin/admin.js", "admin/admin-main.js", "admin/icone.png", "preload.js", "supabase.js", "config.js", "icone.ico", "package.json"],
+  "win": { "target": [{ "target": "nsis", "arch": ["x64"] }], "icon": "icone.ico" },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Lanchonete Admin",
+    "installerIcon": "icone.ico",
+    "uninstallerIcon": "icone.ico",
+    "installerHeaderIcon": "icone.ico"
+  }
+}

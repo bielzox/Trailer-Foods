@@ -1,0 +1,5 @@
+window.LANCHONETE_CFG = {
+  SUPABASE_URL: 'https://SEU-PROJETO.supabase.co',
+  SUPABASE_ANON_KEY: 'SUA_CHAVE_PUBLICAVEL_SUPABASE',
+  BUCKET: 'produtos'
+};

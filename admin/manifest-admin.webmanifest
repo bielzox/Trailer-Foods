@@ -1,0 +1,14 @@
+{
+  "name": "Lanchonete - Admin",
+  "short_name": "Admin",
+  "description": "Painel Admin da Lanchonete",
+  "start_url": "./admin.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0b0f",
+  "theme_color": "#ff5a1f",
+  "icons": [
+    { "src": "../icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "../icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

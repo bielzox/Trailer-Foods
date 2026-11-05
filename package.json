@@ -1,0 +1,35 @@
+{
+  "name": "lanchonete-cardapio",
+  "productName": "Lanchonete Cardapio",
+  "version": "1.0.0",
+  "description": "Cardápio da Lanchonete (PC)",
+  "author": "Lanchonete",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start-admin": "electron admin/admin-main.js",
+    "dist": "electron-builder --win",
+    "dist-admin": "electron-builder --win --config admin/electron-builder.admin.json"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.lanchonete.cardapio",
+    "productName": "Lanchonete Cardapio",
+    "directories": { "output": "instalador" },
+    "files": ["main.js", "preload.js", "index.html", "cardapio.js", "supabase.js", "config.js", "icone.png", "icone.ico", "package.json"],
+    "win": { "target": [{ "target": "nsis", "arch": ["x64"] }], "icon": "icone.ico" },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Lanchonete Cardapio",
+      "installerIcon": "icone.ico",
+      "uninstallerIcon": "icone.ico",
+      "installerHeaderIcon": "icone.ico"
+    }
+  }
+}
